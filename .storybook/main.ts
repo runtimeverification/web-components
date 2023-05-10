@@ -28,6 +28,21 @@ const config: StorybookConfig = {
       include: path.resolve(__dirname, "../"),
     });
 
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        {
+          loader: "postcss-loader",
+          options: {
+            postcssOptions: {
+              plugins: [require("tailwindcss"), require("autoprefixer")],
+            },
+          },
+        },
+      ],
+      include: path.resolve(__dirname, "../"),
+    });
+
     // Return the altered config
     return config;
   },

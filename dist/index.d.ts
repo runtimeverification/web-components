@@ -38,6 +38,8 @@ interface HeaderProps {
 }
 declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => React.JSX.Element;
 
+declare function Footer(): React.JSX.Element;
+
 declare const Page: React.FC;
 
-export { Button, Header, Page };
+export { Button, Footer, Header, Page };

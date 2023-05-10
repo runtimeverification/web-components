@@ -29,7 +29,7 @@ To use the `shared-components` library, import the components you need from the 
         </div>
       );
     }
-    
+
     export default App;
 
 ```
@@ -52,7 +52,7 @@ To build the library, run the following command:
 
 ```
 
-yarn build
+    yarn build
 
 ```
 
@@ -63,5 +63,54 @@ This command generates the **CommonJS**, **ESM**, and **TypeScript** declaration
 To start the Storybook development server, run:
 
 ```
-yarn storybook
+    yarn storybook
 ```
+
+## Adding new components
+
+To add a new component to the library,
+
+- create a new directory in the `src/components` directory and add the component.
+- use `src/components/MyComponent/index.ts` as the entry point for the component.
+- add the component to the `src/index.ts` file.
+
+### Developing new components
+
+Import the component you want to develop in the `pages/index.ts` file and start the development server with command:
+
+```
+    yarn dev
+```
+
+```
+import Footer from "../src/components/Footer";
+
+export default function Home() {
+  return (
+    <div>
+      <Footer />
+    </div>
+  );
+}
+```
+
+After you finished changes remove the import from `pages/index.ts` and save changes.
+
+### Adding new stories
+
+Once you created component, you can add stories for it in `<ComponentName>.stories.ts` file. And run the storybook server with command:
+
+```
+    yarn storybook
+```
+
+
+## Deploying new version
+
+To deploy new version of the library, run the following command:
+
+```
+    yarn build
+```
+
+After that commit and push `dist` folder to main branch.
