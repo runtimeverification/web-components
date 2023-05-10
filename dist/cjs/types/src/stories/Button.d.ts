@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './button.css';
 interface ButtonProps {
     /**
      * Is this the principal call to action on the page?
@@ -25,19 +25,5 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => React.JSX.Element;
-
-type User = {
-    name: string;
-};
-interface HeaderProps {
-    user?: User;
-    onLogin: () => void;
-    onLogout: () => void;
-    onCreateAccount: () => void;
-}
-declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => React.JSX.Element;
-
-declare const Page: React.FC;
-
-export { Button, Header, Page };
+export declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => React.JSX.Element;
+export {};

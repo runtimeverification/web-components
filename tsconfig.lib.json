@@ -17,5 +17,5 @@
     "forceConsistentCasingInFileNames": true,
     "emitDeclarationOnly": true
   },
-  "exclude": ["*.stories.*"]
+  "exclude": ["**/*.stories.*"]
 }
