@@ -1,5 +1,5 @@
 {
-  "name": "react-ts-lib",
+  "name": "shared-components",
   "version": "1.0.0",
   "description": "",
   "main": "dist/cjs/index.js",
@@ -10,10 +10,6 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "app:dev": "next dev",
-    "app:build": "next build",
-    "app:start": "next start",
-    "app:lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
