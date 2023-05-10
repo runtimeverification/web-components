@@ -1,6 +1,4 @@
 {
-
-
   "compilerOptions": {
     "target": "es5",
     "module": "esnext",
@@ -17,5 +15,5 @@
     "forceConsistentCasingInFileNames": true,
     "emitDeclarationOnly": true
   },
-  "exclude": ["**/*.stories.*"]
+  "exclude": ["**/*.stories.*", "pages/**/*", "node_modules"]
 }

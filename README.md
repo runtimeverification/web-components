@@ -65,3 +65,18 @@ To start the Storybook development server, run:
 ```
 yarn storybook
 ```
+
+
+
+
+## Adding new components
+
+To add a new component to the library, 
+- create a new directory in the `src/components` directory and add the component. 
+- use `src/components/MyComponent/index.ts` as the entry point for the component.
+- add the component to the `src/index.ts` file.
+
+
+
+## Developing new components
+

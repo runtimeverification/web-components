@@ -9,6 +9,7 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
+    "dev": "next dev",
     "build": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -29,6 +30,7 @@
     "typescript": "^5.0.4"
   },
   "peerDependencies": {
+    "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -36,6 +38,7 @@
     "@babel/preset-env": "^7.21.5",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.21.5",
+    "@next/eslint-plugin-next": "^13.4.1",
     "@storybook/addon-essentials": "^7.0.10",
     "@storybook/addon-interactions": "^7.0.10",
     "@storybook/addon-links": "^7.0.10",
@@ -43,7 +46,18 @@
     "@storybook/react": "^7.0.10",
     "@storybook/react-webpack5": "^7.0.10",
     "@storybook/testing-library": "^0.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "eslint-config-rv-web-nextjs": "git+https://github.com/runtimeverification/eslint-config-rv-web-nextjs.git#master",
+    "@types/node": "20.1.2",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.40.0",
+    "eslint-config-next": "13.4.1",
+    "next": "13.4.1",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4"
   }
 }
