@@ -1,7 +1,9 @@
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
-import { FC, useMemo, useRef } from "react";
+import { FC, useEffect, useRef } from "react";
+// @ts-ignore
 import { select, selectAll } from "d3";
+// @ts-ignore
 import { graphviz } from "d3-graphviz";
 import { attributer } from "./helpers";
 
@@ -115,7 +117,7 @@ export const useStyles = createUseStyles({
     },
   },
 });
-type Props = {
+interface Props {
   dotGraphData?: string;
   onNodeClick?: (self: any) => void;
   onEdgeClick?: (self: any) => void;
@@ -144,17 +146,19 @@ const ReusableGraph: FC<Props> = ({
       .renderDot(dotGraph)
       .on("end", () => {
         selectAll(`.node`).on("click", function () {
+          // @ts-ignore
           const self = select(this);
-          onNodeClick(self);
+          onNodeClick && onNodeClick(self);
         });
         selectAll(`.edge`).on("click", function () {
+          // @ts-ignore
           const self = select(this);
-          onEdgeClick(self);
+          onEdgeClick && onEdgeClick(self);
         });
       });
   };
 
-  useMemo(() => {
+  useEffect(() => {
     dotGraphData && initializeGraph(dotGraphData, "graph");
   }, [dotGraphData]);
   return (
