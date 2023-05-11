@@ -34,6 +34,7 @@ export default [
         input: "./src/styles/global.css",
         purge: false,
       }),
+
     ],
   },
   {
