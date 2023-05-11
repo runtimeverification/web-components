@@ -1,4 +1,6 @@
-import React from 'react';
+/// <reference types="react" />
+import * as React from 'react';
+import React__default, { FC } from 'react';
 
 interface ButtonProps {
     /**
@@ -25,7 +27,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => React.JSX.Element;
+declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => React__default.JSX.Element;
 
 type User = {
     name: string;
@@ -36,10 +38,17 @@ interface HeaderProps {
     onLogout: () => void;
     onCreateAccount: () => void;
 }
-declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => React.JSX.Element;
+declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => React__default.JSX.Element;
 
 declare function Footer(): React.JSX.Element;
 
-declare const Page: React.FC;
+interface Props {
+    dotGraphData?: string;
+    onNodeClick?: (self: any) => void;
+    onEdgeClick?: (self: any) => void;
+}
+declare const ReusableGraph: FC<Props>;
 
-export { Button, Footer, Header, Page };
+declare const Page: React__default.FC;
+
+export { Button, Footer, ReusableGraph as GraphViz, Header, Page };

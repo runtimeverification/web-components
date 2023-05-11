@@ -1,2 +1,2 @@
-import React from "react";
-export default function Footer(): React.JSX.Element;
+/// <reference types="react" />
+export default function Footer(): import("react").JSX.Element;
