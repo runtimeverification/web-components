@@ -1,5 +1,3 @@
-import React from 'react';
-
 import classNames from "classnames";
 import { createUseStyles } from "react-jss";
 import { FC, useEffect, useRef } from "react";

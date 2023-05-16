@@ -6,6 +6,7 @@ import external from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
 import tailwind from "rollup-plugin-tailwindcss";
+import babel from "@rollup/plugin-babel";
 
 export default [
   {
@@ -34,7 +35,6 @@ export default [
         input: "./src/styles/global.css",
         purge: false,
       }),
-
     ],
   },
   {
