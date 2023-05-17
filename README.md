@@ -10,7 +10,7 @@ To install the `shared-components` library, run the following command:
 
 ```
 
-    yarn add ssh:git@github.com:runtimeverification/shared-components.git
+    yarn add https://github.com/runtimeverification/shared-components#master
 
 ```
 
