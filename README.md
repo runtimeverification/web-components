@@ -16,9 +16,21 @@ To install the `shared-components` library, run the following command:
 
 ## Usage
 
-To use the `shared-components` library, import the components you need from the library:
+Before using the `shared-components` library in your project install `tailwindcss` and `daisyui` according to their documentation.
+
+Add next line to `tailwind.config.js`:
+
+```js
+
+content: [
+    'node_modules/shared-components/**/*.{js,ts,jsx,tsx,mdx}'
+  ],
 
 ```
+
+Import the components you need from the library:
+
+```jsx
 
     import { Button } from 'shared-components';
 
@@ -98,12 +110,12 @@ After you finished changes remove the import from `pages/index.ts` and save chan
 
 ### Adding new stories
 
-Once you created component, you can add stories for it in `<ComponentName>.stories.ts` file. And run the storybook server with command:
+Once you created component, you can add stories for it in `<ComponentName>.stories.ts` file. And run the storybook
+server with command:
 
 ```
     yarn storybook
 ```
-
 
 ## Deploying new version
 
