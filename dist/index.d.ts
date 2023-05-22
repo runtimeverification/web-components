@@ -1,3 +1,4 @@
+import * as react_jsx_runtime from 'react/jsx-runtime';
 import React from 'react';
 
 interface ButtonProps {
@@ -25,7 +26,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => React.JSX.Element;
+declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => react_jsx_runtime.JSX.Element;
 
 type User = {
     name: string;
@@ -36,9 +37,9 @@ interface HeaderProps {
     onLogout: () => void;
     onCreateAccount: () => void;
 }
-declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => React.JSX.Element;
+declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => react_jsx_runtime.JSX.Element;
 
-declare function Footer(): React.JSX.Element;
+declare function Footer(): react_jsx_runtime.JSX.Element;
 
 declare const Page: React.FC;
 

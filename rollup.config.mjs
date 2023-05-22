@@ -5,7 +5,6 @@ import { terser } from "rollup-plugin-terser";
 import external from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import dts from "rollup-plugin-dts";
-import tailwind from "rollup-plugin-tailwindcss";
 
 export default [
   {
@@ -28,11 +27,17 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.lib.json" }),
-      postcss(),
       terser(),
-      tailwind({
-        input: "./src/styles/global.css",
-        purge: false,
+      postcss({
+        minimize: true,
+        modules: true,
+        use: {
+          sass: null,
+          stylus: null,
+          less: { javascriptEnabled: true },
+        },
+        extract: true,
+        plugins: [],
       }),
     ],
   },
