@@ -1,2 +1,1 @@
-import React from "react";
-export default function Footer(): React.JSX.Element;
+export default function Footer(): import("react/jsx-runtime").JSX.Element;
