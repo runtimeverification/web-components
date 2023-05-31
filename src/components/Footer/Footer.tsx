@@ -1,6 +1,3 @@
-import envelop from "../../assets/icons/envelop.png";
-import envelop_white from "../../assets/icons/envelop_white.png";
-
 export default function Footer() {
   return (
     <footer className="footer items-center text-neutral-content mx-auto max-w-7xl p-4 px-2 sm:px-6 lg:px-8">
@@ -20,17 +17,6 @@ export default function Footer() {
         </a>
         <p className="mt-2 text-md-left copyright link link-primary no-underline">
           <a href="https://goo.gl/maps/5iu2nhbUA48fs7fP6" target="_blank">
-            <picture>
-              <source
-                srcSet={`${envelop_white}`}
-                media="(prefers-color-scheme: dark)"
-              />
-              <img
-                className="h-[14px] inline mr-1 fill-red-800"
-                src={`${envelop}`}
-                alt="Runtime Verification logo"
-              />
-            </picture>
             333 North Green Street, Chicago, IL
           </a>
         </p>
