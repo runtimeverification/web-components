@@ -10,7 +10,7 @@ To install the `web-components` library, run the following command:
 
 ```
 
-    yarn add https://github.com/runtimeverification/web-components#master
+    yarn add web-components@https://github.com/runtimeverification/web-components#master
 
 ```
 
