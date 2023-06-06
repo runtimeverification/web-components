@@ -1,4 +1,4 @@
-# RV Shared Components Library
+# RV Web Components Library
 
 This is a shared components library built with `React` and `TypeScript`, optimized for use with modern web applications.
 The library is bundled using `Rollup` for bundle library and comes with built-in support for `Storybook`
@@ -6,25 +6,25 @@ and `Tailwind CSS`.
 
 ## Installation
 
-To install the `shared-components` library, run the following command:
+To install the `web-components` library, run the following command:
 
 ```
 
-    yarn add https://github.com/runtimeverification/shared-components#master
+    yarn add https://github.com/runtimeverification/web-components#master
 
 ```
 
 ## Usage
 
-Before using the `shared-components` library in your project install `tailwindcss` and `daisyui` according to their documentation.
+Before using the `web-components` library in your project install `tailwindcss` and `daisyui` according to their documentation.
 
 Add next line to `tailwind.config.js`:
 
 ```js
 
 content: [
-    'node_modules/shared-components/**/*.{js,ts,jsx,tsx,mdx}'
-  ],
+    'node_modules/web-components/**/*.{js,ts,jsx,tsx,mdx}'
+  ]
 
 ```
 
@@ -32,7 +32,7 @@ Import the components you need from the library:
 
 ```jsx
 
-    import { Button } from 'shared-components';
+    import { Button } from 'web-components';
 
     function App() {
       return (
@@ -52,8 +52,8 @@ To develop new components in library, first clone the repository and install the
 
 ```
 
-git clone https://github.com/runtimeverification/shared-components.git
-cd shared-components
+git clone https://github.com/runtimeverification/web-components.git
+cd web-components
 yarn install
 
 ```
