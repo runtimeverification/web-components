@@ -1,9 +1,12 @@
-import Footer from "../src/components/Footer";
+// import { GraphViz } from "shared-components";
+
+import GraphViz from "@/components/GraphViz";
 
 export default function Home() {
   return (
     <div>
-      <Footer />
+      pages/index.tsx
+      <GraphViz  dotGraphData={'asdasd'}/>
     </div>
   );
 }
