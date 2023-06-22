@@ -1,6 +1,5 @@
-/// <reference types="react" />
-import * as React from 'react';
-import React__default, { FC } from 'react';
+import * as react_jsx_runtime from 'react/jsx-runtime';
+import React from 'react';
 
 interface ButtonProps {
     /**
@@ -27,7 +26,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => React__default.JSX.Element;
+declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => react_jsx_runtime.JSX.Element;
 
 type User = {
     name: string;
@@ -38,17 +37,10 @@ interface HeaderProps {
     onLogout: () => void;
     onCreateAccount: () => void;
 }
-declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => React__default.JSX.Element;
+declare const Header: ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => react_jsx_runtime.JSX.Element;
 
-declare function Footer(): React.JSX.Element;
+declare function Footer(): react_jsx_runtime.JSX.Element;
 
-interface Props {
-    dotGraphData?: string;
-    onNodeClick?: (self: any) => void;
-    onEdgeClick?: (self: any) => void;
-}
-declare const ReusableGraph: FC<Props>;
+declare const Page: React.FC;
 
-declare const Page: React__default.FC;
-
-export { Button, Footer, ReusableGraph as GraphViz, Header, Page };
+export { Button, Footer, Header, Page };

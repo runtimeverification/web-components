@@ -1,4 +1,4 @@
-# RV Shared Components Library
+# RV Web Components Library
 
 This is a shared components library built with `React` and `TypeScript`, optimized for use with modern web applications.
 The library is bundled using `Rollup` for bundle library and comes with built-in support for `Storybook`
@@ -6,21 +6,35 @@ and `Tailwind CSS`.
 
 ## Installation
 
-To install the `shared-components` library, run the following command:
+To install the `web-components` library, run the following command:
 
 ```
 
-    yarn add ssh:git@github.com:runtimeverification/shared-components.git
+    yarn add web-components@git+https://github.com/runtimeverification/web-components#master
 
 ```
+*Note: you should use `git+https://github.com/...` format for compatability with `nix flake`*
+
 
 ## Usage
 
-To use the `shared-components` library, import the components you need from the library:
+Before using the `web-components` library in your project install `tailwindcss` and `daisyui` according to their documentation.
+
+Add next line to `tailwind.config.js`:
+
+```js
+
+content: [
+    'node_modules/web-components/**/*.{js,ts,jsx,tsx,mdx}'
+  ]
 
 ```
 
-    import { Button } from 'shared-components';
+Import the components you need from the library:
+
+```jsx
+
+    import { Button } from 'web-components';
 
     function App() {
       return (
@@ -40,8 +54,8 @@ To develop new components in library, first clone the repository and install the
 
 ```
 
-git clone https://github.com/runtimeverification/shared-components.git
-cd shared-components
+git clone https://github.com/runtimeverification/web-components.git
+cd web-components
 yarn install
 
 ```
@@ -98,12 +112,12 @@ After you finished changes remove the import from `pages/index.ts` and save chan
 
 ### Adding new stories
 
-Once you created component, you can add stories for it in `<ComponentName>.stories.ts` file. And run the storybook server with command:
+Once you created component, you can add stories for it in `<ComponentName>.stories.ts` file. And run the storybook
+server with command:
 
 ```
     yarn storybook
 ```
-
 
 ## Deploying new version
 

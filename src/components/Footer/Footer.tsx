@@ -2,20 +2,22 @@ export default function Footer() {
   return (
     <footer className="footer items-center text-neutral-content mx-auto max-w-7xl p-4 px-2 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center sm:items-start w-full">
-        <picture>
-          <source
-            srcSet="https://runtimeverification.com/assets/img/rv-logo-dark.png"
-            media="(prefers-color-scheme: dark)"
-          />
-          <img
-            className="h-[32px]"
-            src="https://runtimeverification.com/assets/img/rv-logo.png"
-            alt="Runtime Verification logo"
-          />
-        </picture>
+        <a href="https://runtimeverification.com">
+          <picture>
+            <source
+              srcSet="https://runtimeverification.com/assets/img/rv-logo-dark.png"
+              media="(prefers-color-scheme: dark)"
+            />
+            <img
+              className="h-[32px]"
+              src="https://runtimeverification.com/assets/img/rv-logo.png"
+              alt="Runtime Verification logo"
+            />
+          </picture>
+        </a>
         <p className="mt-2 text-md-left copyright link link-primary no-underline">
-          <a href="https://goo.gl/maps/TkuJSdoA3oNPpc486" target="_blank">
-            301 N Neil St. Suite 412, Champaign, IL 61820
+          <a href="https://goo.gl/maps/5iu2nhbUA48fs7fP6" target="_blank">
+            333 North Green Street, Chicago, IL
           </a>
         </p>
       </div>
